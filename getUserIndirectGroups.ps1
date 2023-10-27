@@ -14,16 +14,6 @@
 # user runing script minumum app admin
 #====================================================================
 
-# function merge ($target, $source) {
-#     $source.psobject.Properties | % {
-#         if ($_.TypeNameOfValue -eq 'System.Management.Automation.PSCustomObject' -and $target."$($_.Name)" ) {
-#             merge $target."$($_.Name)" $_.Value
-#         }
-#         else {
-#             $target | Add-Member -Value $_.Value -Force
-#         }
-#     }
-# }
 
 #request path to save txt file
 
@@ -56,20 +46,10 @@ if(!$checkEmptyPath) {
     }
 
     
-    # $clientId = Read-host "AppId "  #id for app in my tenant
-    # $clientSecret = Read-host "AppSecret " #secret for app
-    # $tenantId = Read-host "TenantId " #tenant
-    # $userObjectId = Read-host "User ObjectId " #user to check groups
-
-
-    # #setting vars for test
-    $clientId = "c63afc65-9326-4060-a547-cf2d8c8acd65"  #id for IndirectGroupsTest in my tenant
-    $clientSecret = "gJe8Q~p.rylQ9T3VHNrzpglY~IoTfJy~6JrC1dfS" #secret for IndirectGroupsTest
-    $tenantId =  "8e004816-e50c-4fca-9a2a-87166396aa69" #my tenant
-    # $userObjectId = "b0b07b82-de3a-4477-b793-54c43c3a0252" #user AzureOnly
-    $userObjectId = "283998fc-9f88-4186-991e-985f9c0d65cb" #user failsafeuser
-
-
+     $clientId = Read-host "AppId "  #id for app in my tenant
+     $clientSecret = Read-host "AppSecret " #secret for app
+     $tenantId = Read-host "TenantId " #tenant
+     $userObjectId = Read-host "User ObjectId " #user to check groups
 
     $grantType = "client_credentials" #connection flow
     $oAuthUri = "https://login.microsoftonline.com/$tenantId/oauth2/token" 

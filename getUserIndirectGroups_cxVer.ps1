@@ -11,7 +11,6 @@
 
 #====================================================================
 # App in use must have Directory.Read.All and Member.Read.Hidden Graph API permissions
-# user runing script minumum app admin
 #====================================================================
 
 #request path to save txt file

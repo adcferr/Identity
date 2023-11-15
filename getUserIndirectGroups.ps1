@@ -20,7 +20,7 @@
 # $path_ = Read-Host "Full file path for txt list output (Filename included) "
 
 #test vars
-$path_ = "C:\Users\v-aferreira\Desktop\indirectgroups"
+$path_ = read-host "Full file path: "
 
 #log keep for CSV build
 $Logs_1 = @()
